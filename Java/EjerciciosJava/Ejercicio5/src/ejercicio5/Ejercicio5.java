@@ -1,21 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ejercicio5;
+package Ejercicio5;
 
-/**
- *
- * @author Usuario
- */
+import java.util.Scanner;
+
 public class Ejercicio5 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner entrada = new Scanner(System.in);
+        
+        // Genera un número aleatorio entre 0 y 100
+        int numeroAleatorio = (int) (Math.random() * 101);
+        int numeroIngresado;
+        int intentos = 0;
+
+        System.out.println("=== ¡Juego de Adivinar el Número! ===");
+        
+        do {
+            System.out.print("Introduce un número (0-100): ");
+            numeroIngresado = entrada.nextInt();
+            intentos++;
+
+            if (numeroIngresado < numeroAleatorio) {
+                System.out.println("Es mayor");
+            } else if (numeroIngresado > numeroAleatorio) {
+                System.out.println("Es menor");
+            } else {
+                System.out.println("\n¡Felicidades! Has acertado el número: " + numeroAleatorio);
+                System.out.println("Número total de intentos: " + intentos);
+            }
+        } while (numeroIngresado != numeroAleatorio);
+
+        entrada.close();
     }
-    
 }
