@@ -1,0 +1,118 @@
+# Tipo set
+
+planetas = {'marte', 'Jupiter', 'Venus'}
+print(len(planetas)) # Usamos la funcion len = length significa largo
+
+#Revisar si un elemento existe dentro de set
+print('Jupiter' in planetas)
+
+# Agregar un elemento
+planetas.add('Tierra') # add es una funcion
+print(planetas)
+
+# Eliminar elementos, puede arrojar un error si el elemento no existe
+planetas.remove('Jupiter')
+print(planetas)
+planetas.discard('Tierra') # Esta funcion no nos precenta ningun error
+print(planetas)
+
+# Limpiar set
+planetas.clear()
+print(planetas)
+
+# Eliminar set o conjunto
+del planetas
+#print(planetas) # Al eliminar nos muestra fun error
+
+# 'Maradona' :10 Un diccionario esta compuesto por dos elementos
+# UNA LLAVE Y UN VALOR
+# DICT(KEY,VALUE)
+diccionario = {
+    'IDE':'Integrated Development Environment',
+    'POO':'Programacion Orientada a Objetos' ,
+    'SABD':'Sistema de Administracion de Base de Datos'
+}
+# Verificar la cantidad de elementos del diccionario
+print(len(diccionario))
+print(diccionario)
+
+# Acceder a un diccionario con la llave(key)
+print(diccionario['IDE'])
+
+# Otra forma de recuperar otro elemento
+print(diccionario.get('POO'))
+print(diccionario.get('SABD'))
+
+# Modificamos elementos
+diccionario['IDE'] = 'Entorno de Desarrollo Integrado'
+print(diccionario)
+
+# Como recorrer los elementos
+for termino in diccionario:
+    print(termino)
+
+# Necesitamos una funcion para recorrer un diccionario
+for termino, valor in diccionario.items():
+    print(termino, valor)
+
+# Otras maneras de acceder a un diccionario
+for termino in diccionario.keys():
+    print(termino) # Muesta solo las llaves
+
+for valor in diccionario.values(): # Usamos una funcion para aceeder al valor
+    print(valor)
+
+# Comprobar la existencia de algun elemento
+print('IDE' in diccionario) # devuelve un booleano
+
+# Agregar un elemento
+diccionario['PK'] = 'Primary Key'
+print(diccionario)
+
+# Eliminar un elemento
+diccionario.pop('SABD')
+print(diccionario)
+
+# Vaciar un diccionario
+diccionario.clear()
+print(diccionario)
+
+# Eliminar diccionario
+del diccionario # el diccionario se borro
+
+
+# Concatenamos listas
+lista1 = [1, 2, 3, 1]
+lista2 = [4, 5, 6, 1]
+lista3 = lista1+lista2 # Concatenamos
+print(lista3)
+
+lista3.extend([7, 8, 9, 1]) # Funcion para agregar varios elementos a una lista
+print(lista3)
+
+print(lista3.index(5)) # Funcion para ubicar en que indice esta el valor ingresado
+# Print(lista3.index(0)) # ESto daria un error por no ser un elemento parte de la lista
+
+# Como saber cuantos valores repetidos hay dentro de una lista
+print(lista3.count(1)) # Cuaneta cuantos valores iguales hay dentro de la lista
+
+# Para poner al reves una lista
+lista3.reverse()
+print(lista3)
+
+# Para que una lista se multiplique repitiendo sus elementos
+lista3 = lista3 * 2
+print(lista3)
+
+# Metodos de ordenamineto, en python es una funcion
+lista3.sort() # Ordena los elementos ascendentemente
+print(lista3)
+lista3.sort(reverse=True) # Ordena Descendentemente
+print(lista3)
+
+tupla = (4, 'Hola', 6.78, [1, 2, 78], 4, 'Hola') # Puede tener difenrentes tipos de datos dentro
+print(tupla)
+
+print(4 in tupla) # Accion booleana, su respuesta es de tipo booleana
+# Lo que podemos usar dentro de tuplas son: index, count, len
+# En tuplas se puede convertir de tupla a lista y de lista a tupla
