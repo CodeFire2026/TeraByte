@@ -1,1 +1,9 @@
 /Java/EjerciciosJava/Ejercicio5/nbproject/private/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+out/
+target/
+*.class
