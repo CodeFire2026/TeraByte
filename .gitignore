@@ -1,4 +1,3 @@
-/Java/EjerciciosJava/Ejercicio5/nbproject/private/
 .idea/
 *.iml
 *.iws
@@ -7,3 +6,12 @@
 out/
 target/
 *.class
+
+nbproject/private/
+build/
+dist/
+nbbuild/
+nbdist/
+nbactions.xml
+*.class
+*.jar
