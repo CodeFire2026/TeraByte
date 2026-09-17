@@ -69,6 +69,7 @@ function cambiarValor(a){ //paso por valor
 cambiarValor(k);
 console.log(k);
 
+//Paso por referencia
 const persona = {
     nombre: 'Juan',
     apellido: 'Lopez'
