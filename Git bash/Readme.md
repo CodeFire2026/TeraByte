@@ -416,5 +416,5 @@ git fetch
 git log --stat #Se verá claro que el colaborador ingreso su primer commit
 # 10. A partir de ahora el dueño del repositorio y el colaborador deberán repartir el trabajo, esto se hace con distintas ramas de trabajo: el dueño trabajará desde la rama header y el colaborador desde la rama footer, al final cuando se termine, se hara un merge para terminar el proyecto.
 ```
->Profesor Ariel Betancud
 
+>Profesor Ariel Betancud
