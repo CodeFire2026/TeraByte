@@ -1,0 +1,24 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>140</x><y>40</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;FiguraGeometrica&gt;&gt;
+--
+- alto
+- ancho
+--
++ get_alto()
++ set_alto(alto)
++ get_ancho()
++ set_ancho(ancho)
++ __str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>50</y><w>160</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Color&gt;&gt;
+--
+- color
+--
++ get_color()
++ set_color(color)
++ __str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>370</y><w>160</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Cuadrado&gt;&gt;
+--
+--
++ area()
++ __str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>380</y><w>160</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Rectangulo&gt;&gt;
+--
+--
++ area()
++ __str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>190</y><w>30</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>160</y><w>360</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>190</y><w>400</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;380;190</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>160</y><w>40</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;20;220</additional_attributes></element></diagram>
