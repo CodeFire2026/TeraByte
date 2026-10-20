@@ -63,3 +63,50 @@ console.log(`Información del producto 2: ${producto2.toString()}`);
 
 // Consultar el contador estático
 console.log(`Cantidad de productos creados: ${Producto.contadorProductos}`);
+
+
+
+class Orden {
+    static contadorOrdenes = 0;
+    static MAX_PRODUCTOS = 5;
+
+    constructor() {
+        this.idOrden = ++Orden.contadorOrdenes;
+        this.productos = [];
+    }
+
+    // Método para agregar un producto a la orden
+    agregarProducto(producto) {
+        if (this.productos.length < Orden.MAX_PRODUCTOS) {
+            this.productos.push(producto);
+        } else {
+            console.log("No se pueden agregar más productos a la orden.");
+        }
+    }
+
+    // Método para calcular el total de la orden
+    calcularTotal() {
+        let total = 0;
+        for (let producto of this.productos) {
+            total += producto.getPrecio();
+        }
+        return total;
+    }
+
+    // Método para mostrar la información de la orden
+    mostrarOrden() {
+        let productosStr = "";
+        for (let producto of this.productos) {
+            productosStr += producto.toString() + " ";
+        }
+        return `Orden { id: ${this.idOrden}, total: $${this.calcularTotal()} } Productos: ${productosStr}`;
+    }
+}
+
+// Ejemplo de uso con tus productos
+const orden1 = new Orden();
+orden1.agregarProducto(producto1);
+orden1.agregarProducto(producto2);
+
+console.log(orden1.mostrarOrden());
+console.log(`Cantidad de órdenes creadas: ${Orden.contadorOrdenes}`);
