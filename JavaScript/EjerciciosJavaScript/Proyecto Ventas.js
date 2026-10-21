@@ -110,3 +110,29 @@ orden1.agregarProducto(producto2);
 
 console.log(orden1.mostrarOrden());
 console.log(`Cantidad de órdenes creadas: ${Orden.contadorOrdenes}`);
+
+
+
+class VentasTest {
+    static main() {
+        // Crear los productos
+        const producto1 = new Producto("Teclado", 25000);
+        const producto2 = new Producto("Mouse", 12000);
+
+        // Crear una orden
+        const orden1 = new Orden();
+
+        // Agregar los productos a la orden
+        orden1.agregarProducto(producto1);
+        orden1.agregarProducto(producto2);
+
+        // Mostrar la información de la orden
+        console.log(orden1.mostrarOrden());
+
+        // Mostrar la cantidad de órdenes creadas
+        console.log(`Cantidad de órdenes creadas: ${Orden.contadorOrdenes}`);
+    }
+}
+
+// Ejecutar la prueba
+VentasTest.main();
