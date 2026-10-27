@@ -40,6 +40,10 @@ class Producto {
 
 const producto1 = new Producto("Teclado", 25000);
 const producto2 = new Producto("Mouse", 12000);
+const producto3 = new Producto("Monitor", 80000);
+const producto4 = new Producto("Auriculares", 15000);
+const producto5 = new Producto("Webcam", 20000);
+// const producto6 = new Producto("Parlantes", 30000);
 
 // Obtener los atributos del producto1
 console.log(`Id del producto 1: ${producto1.getIdProducto()}`);
@@ -107,6 +111,10 @@ class Orden {
 const orden1 = new Orden();
 orden1.agregarProducto(producto1);
 orden1.agregarProducto(producto2);
+orden1.agregarProducto(producto3);
+orden1.agregarProducto(producto4);
+orden1.agregarProducto(producto5);
+//orden1.agregarProducto(producto6); // Intento de agregar un sexto producto (no se agregará)
 
 console.log(orden1.mostrarOrden());
 console.log(`Cantidad de órdenes creadas: ${Orden.contadorOrdenes}`);
@@ -118,6 +126,7 @@ class VentasTest {
         // Crear los productos
         const producto1 = new Producto("Teclado", 25000);
         const producto2 = new Producto("Mouse", 12000);
+        
 
         // Crear una orden
         const orden1 = new Orden();
