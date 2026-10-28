@@ -1,12 +1,12 @@
 const members = [
   {
     name: "Nicolas Ezequiel Lozano",
-    role: "Desarrollo Frontend",
-    bio: "Me encarga de la interfaz, la accesibilidad y que todo se vea bien en cualquier dispositivo.",
-    skills: ["HTML", "CSS", "JavaScript"],
+    role: "Desarrollo Backend",
+    bio: "Diseño las APIs y la lógica de la aplicación. Tambien cuento con conocimientos en Frontend",
+    skills: ["Java", "js", "Node.js", "Bases de datos", "APIs REST"],
   },
   {
-    name: "Mauro Torres",
+    name: "Mauro Torre",
     role: "Desarrollo Backend",
     bio: "Diseño las APIs y la lógica de la aplicación, manteniendo el código ordenado y testeado.",
     skills: ["Node.js", "Bases de datos", "APIs REST"],
