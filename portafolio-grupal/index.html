@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terabyte · Portafolio grupal</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#inicio" class="logo">
+      <img src="logo.svg" alt="Terabyte logo" />
+      <span>Terabyte</span>
+    </a>
+    <ul class="nav-options">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <section id="inicio" class="hero">
+      <p class="hero-eyebrow" style="opacity:0">Grupo Terabyte · Programación 2</p>
+      <h1 class="hero-title" style="opacity:0">Conoce a nuestro equipo</h1>
+      <p class="hero-text" style="opacity:0">
+        Somos 5 estudiantes que desarrollamos sus proyectos en este portafolio,
+        junto con las tecnologías, desafíos y aprendizajes que obtuvimos a lo largo del proceso.
+      </p>
+      <a href="#equipo" class="btn" style="opacity:0">Ver al equipo</a>
+    </section>
+
+    <section class="featured">
+      <h2 class="featured-title">Miembro destacado</h2>
+      <div class="featured-box">
+        <button class="carousel-btn btn-prev" id="btnPrev" aria-label="Miembro anterior">‹</button>
+        <div class="featured-content">
+          <div class="avatar" id="featuredAvatar"></div>
+          <h3 id="featuredName"></h3>
+          <p class="featured-role" id="featuredRole"></p>
+          <p class="featured-bio" id="featuredBio"></p>
+          <ul class="featured-skills" id="featuredSkills"></ul>
+        </div>
+        <button class="carousel-btn btn-next" id="btnNext" aria-label="Miembro siguiente">›</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+
+    <section id="equipo" class="team">
+      <h2 class="section-title">Nuestro equipo</h2>
+      <div class="team-grid" id="teamGrid"></div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2 class="section-title">Nuestros contactos</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <span>📧</span>
+          <a href="mailto:grupo.programacion2@gmail.com">grupo.programacion2@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <span>💼</span>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn del grupo</a>
+        </div>
+        <div class="contact-card">
+          <span>🐙</span>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub del grupo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="#inicio"><img class="footer-logo" src="logo.svg" alt="Terabyte logo" /></a>
+    <p>Grupo Terabyte · Programación 2</p>
+    <button class="btn thanks" id="btnThanks">Gracias por el espacio</button>
+  </footer>
+
+  <div class="toast" id="toast">¡Gracias a ti por leernos! 💙</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
