@@ -125,12 +125,16 @@ class VentasTest {
         // Agregar los productos a la orden
         orden1.agregarProducto(producto1);
         orden1.agregarProducto(producto2);
+        orden1.agregarProducto(producto2);
+        orden1.agregarProducto(producto2);
+        orden1.agregarProducto(producto2);
+        orden1.agregarProducto(producto2);
 
         // Mostrar la información de la orden
         console.log(orden1.mostrarOrden());
 
         // Mostrar la cantidad de órdenes creadas
-        console.log(`Cantidad de órdenes creadas: ${Orden.contadorOrdenes}`);
+        console.log(`Cantidad de órdenes creadas: ${Orden.contadorOrdenes}`); 
     }
 }
 
