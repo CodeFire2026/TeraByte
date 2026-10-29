@@ -436,3 +436,21 @@ El programador sube su trabajo con git push origin #nombre_rama
 El encargado de organizar el proyecto baja, revisa y unifica todos los cambios
 ```
 >Profesor Ariel Betancud
+
+# CLASE 11 MIÉRCOLES 21 DE OCTUBRE DEL 2026
+```sh
+Flujo de trabajo profesional -> Archivos binarios
+Las imagenes cargandolas en el repositorio, representan un problema: porque las imagenes son pesadas, y si la subimos al repositorio, siempre que hagamos cambios, vamos a estar trayendo la imagen siempre, estas imagenes son binarios para GitHub, mientras mas binarios carguemos, más pesado va a ser el repositorio, algo que no es parte de las buenas practicas.
+
+Otra cosa muy importante a tener en cuenta, es que en cada commit que hagamos hay un tamaño predefinido para la carga, este no lo podemos superar o no podremos subir los commits, el tamaño es 100 mb, si acoplamos un archivo binario en un commit que pese mas de esto, será un problema, no nos dejará seguir commiteando, porque siempre seguirá arrastrando el archivo binario.
+```
+
+>Profesor Ariel Betancud
+
+# CLASE 12 MIÉRCOLES 28 DE OCTUBRE DEL 2026
+```sh
+Flujo de trabajo profesional -> Ya hemos llegado al nivel más alto de GitHub
+Es momento de presentar el README.md con todos los comandos y prácticas en cada clase, ya terminando este semestre, es hoy que debe estar completo este archivo en el lenguaje de Markdown, lo voy a pedir en la clase en vivo por zoom. los espero.
+```
+>Profesor Ariel Betancud
+
