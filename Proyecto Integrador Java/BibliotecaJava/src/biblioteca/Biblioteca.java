@@ -51,6 +51,30 @@ public class Biblioteca {
 
     public List<Libro> obtenerLibros() {
         return libros;
+        public boolean prestarLibro(String titulo) {
+        Libro libro = buscarPorTituloExacto(titulo);
+
+        if (libro == null) {
+            return false;
+        }
+
+        return libro.prestar();
+    }
+
+    public boolean devolverLibro(String titulo) {
+        Libro libro = buscarPorTituloExacto(titulo);
+
+        if (libro == null) {
+            return false;
+        }
+
+        return libro.devolver();
+    }
+
+    public void ordenarLibros() {
+        libros.sort(Comparator.comparing( // .sort Este método recibe un comparador que define cómo se deben ordenar los elementos
+                Libro::getTitulo, String.CASE_INSENSITIVE_ORDER // String.CASE_INSENSITIVE_ORDER es un comparador especial de Java que compara cadenas ignorando mayúsculas/minúsculas
+        )); // Libro::getTitulo es una referencia a método, usa el título del libro como clave para comparar
     }
 
     
