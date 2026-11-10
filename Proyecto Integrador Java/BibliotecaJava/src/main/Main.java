@@ -1,11 +1,10 @@
 
 package main;
 
-import biblioteca.Biblioteca;
-import libro.Libro;
-
 import java.util.List;
 import java.util.Scanner;
+import biblioteca.Biblioteca;
+import libro.Libro;
 
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
@@ -24,6 +23,18 @@ public class Main {
                     break;
                 case 2:
                     mostrarLibros();
+                    break;
+                case 3:
+                    buscarLibro();
+                    break;
+                case 4:
+                    prestarLibro();
+                    break;
+                case 5:
+                    devolverLibro();
+                    break;
+                case 6:
+                    ordenarLibros();
                     break;
                 case 7:
                     System.out.println("\nPrograma finalizado. ¡Hasta luego!");
@@ -80,6 +91,69 @@ public class Main {
         }
     }
 
+    private static void buscarLibro() {
+        System.out.println("\n--- BUSCAR LIBRO ---");
+
+        String texto = leerTexto("Ingrese título o parte del título: ");
+        List<Libro> resultados = biblioteca.buscarPorTituloParcial(texto);
+
+        if (resultados.isEmpty()) {
+            System.out.println("No se encontraron coincidencias.");
+            return;
+        }
+
+        System.out.println("Resultados encontrados:");
+        for (Libro libro : resultados) {
+            System.out.println(libro);
+        }
+    }
+
+    private static void prestarLibro() {
+        System.out.println("\n--- PRESTAR LIBRO ---");
+
+        String titulo = leerTexto("Título: ");
+        Libro libro = biblioteca.buscarPorTituloExacto(titulo);
+
+        if (libro == null) {
+            System.out.println("Libro no encontrado.");
+            return;
+        }
+
+        if (biblioteca.prestarLibro(titulo)) {
+            System.out.println("Préstamo realizado correctamente.");
+        } else {
+            System.out.println("No hay stock disponible.");
+        }
+    }
+
+    private static void devolverLibro() {
+        System.out.println("\n--- DEVOLVER LIBRO ---");
+
+        String titulo = leerTexto("Título: ");
+        Libro libro = biblioteca.buscarPorTituloExacto(titulo);
+
+        if (libro == null) {
+            System.out.println("Libro no encontrado.");
+            return;
+        }
+
+        if (biblioteca.devolverLibro(titulo)) {
+            System.out.println("Libro devuelto correctamente.");
+        } else {
+            System.out.println("No hay préstamos activos de ese libro.");
+        }
+    }
+
+    private static void ordenarLibros() {
+        if (biblioteca.obtenerLibros().size() <= 1) { // .size() devuelve cauntos elementos hay en la lista
+            System.out.println("\nNo hay suficientes libros para ordenar.");
+            return;
+        }
+
+        biblioteca.ordenarLibros();
+        System.out.println("\nLibros ordenados alfabéticamente por título.");
+    }
+
     private static String leerTexto(String mensaje) {
         while (true) {
             System.out.print(mensaje);
@@ -118,4 +192,3 @@ public class Main {
         }
     }
 }
-
